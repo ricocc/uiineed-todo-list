@@ -127,12 +127,12 @@
                             </div>
                         </li>
                     </transition-group>
-                    <!-- <div class="bar-message bar-bottom">
-                    <div class="bar-message-text">
-                        <span v-if="leftTodosCount">剩余 {{leftTodosCount}} 项未完成</span>
-                        <span v-else-if="completedTodosCount">全部完成, 继续加油!</span>
+                    <div class="bar-message bar-bottom">
+                        <div class="bar-message-text">
+                            <span v-if="leftTodosCount">剩余 {{leftTodosCount}} 项未完成</span>
+                            <span v-else-if="completedTodosCount">完美收工！</span>
+                        </div>
                     </div>
-                </div> -->
                 </div>
 
                 <div class="footer side-bar" >
@@ -364,7 +364,7 @@
                     todo.completed = false
                 },
                 markAllAsCompleted: function () {
-                    if (!confirm('Confirm to mark all as completed?')) {
+                    if (!confirm('确认一键勾选完成全部待办事项？')) {
                         return
                     }
                     this.todos.map(function (todo) {
@@ -426,7 +426,7 @@
                     this.editedTodo = null
                 },
                 clearCompleted: function () {
-                    if (!confirm('Confirm to clear all completed items?')) {
+                    if (!confirm('确认清除全部已完成的代办事项?')) {
                         return
                     }
                     this.completedTodos.map(todo => todo.removed = true);
@@ -434,7 +434,7 @@
                     this.todos = this.leftTodos;
                 },
                 clearAll: function () {
-                    if (!confirm('Confirm to clear all todo items?')) {
+                    if (!confirm('确认清除全部待办事项?')) {
                         return
                     }
                     this.todos.map(todo => todo.removed = true);

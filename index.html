@@ -184,6 +184,12 @@
                                 </div>
                             </li>
                         </transition-group>
+                        <div class="bar-message bar-bottom">
+                            <div class="bar-message-text">
+                                <span v-if="leftTodosCount">{{leftTodosCount}} items remaining</span>
+                                <span v-else-if="completedTodosCount">All completed, good job!</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="footer side-bar">
