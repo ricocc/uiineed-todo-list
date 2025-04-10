@@ -1,0 +1,23 @@
+{
+  "name": "uiineed-todo-list",
+  "version": "1.0.0",
+  "description": "Todo List Online - Minimalist, No-Login Required Web Todo App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricocc/uiineed-todo-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricocc/uiineed-todo-list/issues"
+  },
+  "homepage": "https://github.com/ricocc/uiineed-todo-list#readme",
+  "devDependencies": {
+    "electron": "^35.1.4"
+  }
+}

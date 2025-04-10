@@ -469,6 +469,7 @@ h1 {
   color: #606060;
   line-height: 1.6;
   letter-spacing: 0.24px;
+  user-select: none;
 }
 @media only screen and ( max-width: 768px) {
   .empty-tips {
