@@ -12,6 +12,8 @@
     <link type="favicon" rel="shortcut icon" href="public/img/favicon.png" />
     <link href="public/css/normalize.css" rel="stylesheet" media="screen">
     <link href="public/css/style.min.css" rel="stylesheet" media="screen">
+    <!-- umami提供数据服务，fork到自己网站中记得修改ID，umami地址：https://umami.is/-->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b562f7ba-2e5c-4b7a-97b9-679a5eaa2b95"></script>
     <script>
         // 自动判断语言并切换
         const browserLanguage = navigator.language || navigator.userLanguage;
@@ -278,41 +280,50 @@
              <!-- 自定义个人的信息 -->
             <div class="nav" draggable="false">
                 <div class="github">
-                    <a href="https://github.com/ricocc/uiineed-todo-list?ref=opensource-todo" target="_blank" class="social-link" draggable="false">
+                    <a href="https://github.com/ricocc/uiineed-todo-list" target="_blank" class="social-link" draggable="false">
                         <img src="public/img/social/github.svg" class="ic-social" alt="" draggable="false">
                     </a>
                 </div>
-                <!-- <div class="about">
+                <div class="about">
                     <div class="info">
                         <div class="info-ico" @click="togglePop" :style="{ fontWeight: popShow ? 'normal' : 'bold' }">
-                            关于我
+                        作者
                         </div>
                         <div class="popup animated popIn" v-if="!popShow">
-                            <div class="author">
+                            <a href="https://ricoui.com/?ref=todo" class="author" target="_blank" style="text-decoration: none;">
                                 <img src="public/img/author.jpg" alt="">
                                 Rico的设计漫想
-                            </div>
+                            </a>
                             <div class="author-info">
                                 <div class="author-desc">
-                                    简简单单喜欢探索设计和开发的设计师.
+                                    写代码和开源的设计师
                                 </div>
                             </div>
 
                             <div class="social">
-                                <a href="https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f?ref=opensource-todo" target="_blank" class="social-link">
+                                <a href="https://github.com/ricocc/uiineed-todo-list" target="_blank" class="social-link" draggable="false">
+                                    <img src="public/img/social/github.svg" class="ic-social" alt="" draggable="false">
+                                </a>
+
+                                <a href="https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f" target="_blank" class="social-link">
                                     <img src="public/img/social/xiaohongshu.svg" class="ic-social" alt="">
                                 </a>
-                                <a href="https://space.bilibili.com/11442751?ref=opensource-todo" target="_blank" class="social-link">
-                                    <img src="public/img/social/bilibili.svg" class="ic-social" alt="">
+                                <a href="https://x.com/ricouii" target="_blank" class="social-link">
+                                    <img src="public/img/social/x.svg" class="ic-social" alt="">
                                 </a>
-                                <a href="https://ricocc.zcool.com.cn/?ref=opensource-todo" target="_blank" class="social-link">
+                                <!-- <a href="https://space.bilibili.com/11442751?ref=opensource-todo" target="_blank" class="social-link">
+                                    <img src="public/img/social/bilibili.svg" class="ic-social" alt="">
+                                </a> -->
+                                <a href="https://www.zcool.com.cn/u/13170647" target="_blank" class="social-link">
                                     <img src="public/img/social/zcool.svg" class="ic-social" alt="">
                                 </a>
                                 <a href="mailto:ricocc@qq.com" class="social-link">
                                     <img src="public/img/social/mail.svg" class="ic-social" alt="">
                                 </a>
                             </div>
-                            <a href="https://blog.ricocc.com/?ref=todo" target="_blank" class="inspiration">🔖开源的设计博客↗
+                            <a href="https://github.com/ricocc/uiineed-todo-list" target="_blank" class="inspiration">⭐<small>200+</small> Todo开源地址 
+                            </a>
+                            <a href="https://ricoui.com/?ref=todo" target="_blank" class="inspiration">⭐<small>180+</small> 个人网站↗
                             </a>
                             <div class="zanshan">
                                 <p>有问题可以添加微信☕</p>
@@ -320,7 +331,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- 根据需要切换中英文作为首页 -->
                 <div class="language switch-language">
                     <a href="index.html" class="en" draggable="false" @click="saveLanguage('en')">En</a>
