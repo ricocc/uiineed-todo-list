@@ -276,15 +276,15 @@
                     </div>
 
                     <div class="footer side-bar">
-                        <div class="side-shortcut" @click="shortCutAction()" :class="{fold: isShow}">
-                            <div class="shortcut-switch">
-                                <span class="shortcut-title">{{shortCut}}</span>
-                                <span class="shortcut-name">Quicks
-                                </span>
-                            </div>
+                            <div class="side-shortcut" @click="shortCutAction()" :class="{fold: isShow}">
+                                <div class="shortcut-switch">
+                                    <span class="shortcut-title">{{shortCut}}</span>
+                                    <span class="shortcut-name">Quicks
+                                    </span>
+                                </div>
 
-                        </div>
-                        <div class="todo-footer-box">
+                            </div>
+                            <div class="todo-footer-box">
                             <ul class="todo-func-list filter">
                                 <!-- <li v-if="todos.length || recycleBin.length">Filter：</li> -->
                                 <!-- <li v-if="hasRemovedTodo" ><input type="button" value="Back"
@@ -439,6 +439,7 @@
 
             </div>
         </div>
+        
         <script>
             // localStorage operations
             var STORAGE_KEY = 'uiineed-todos';
@@ -461,7 +462,7 @@
             var app = new Vue({
                 el: '#todo-app',
                 data: function() {
-                    return {
+                    return {    
                         todos: todoStorage.fetch(),
                         newTodoTitle: '',
                         editedTodo: null,

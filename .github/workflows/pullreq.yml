@@ -1,0 +1,22 @@
+name: Auto Create Pull Request
+on:
+  push:
+    branches:
+      - 'feature/*' # หรือเปลี่ยนเป็นชื่อ branch ที่คุณใช้ประจำ
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "docs: update from local"
+          title: "PR: รวบรวมงานจากเครื่องของคุณ"
+          body: "Pull Request นี้สร้างขึ้นโดยอัตโนมัติจาก GitHub Action"
+          branch: master-sync-temp # บอทจะสร้าง branch พักไว้ให้
+          base: main # merge เข้า branch หลัก
